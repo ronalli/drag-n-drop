@@ -27,20 +27,26 @@ body {
   border-radius: 20px;
   padding: 0.8rem 1rem;
   color: #fff;
+  position: relative;
 }
 
 .item {
   width: 150px;
   height: 66px;
   border: 1px solid #eee;
-  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  box-shadow: 4px 4px 9px rgba(15, 15, 15, 0.36);
   border-radius: 20px;
   background: #f7f6f7;
   padding: 0.8rem 1rem;
   color: #828282;
-  text-align: center;
+  font-weight: 700;
   cursor: grab;
   transition: all 0.25s ease-in;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item:active {
@@ -53,21 +59,37 @@ body {
 }
 
 .start {
-  background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+  background: linear-gradient(90deg, #6185e4 0%, #20af50 179.25%);
+  box-shadow: 0px 0px 19px rgba(15, 15, 15, 0.5);
 }
 
 .progress {
-  background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+  background: linear-gradient(90deg, #200cff 0%, #68e0cf 100%);
+  box-shadow: 0px 0px 19px rgba(15, 15, 15, 0.5);
 }
 
 .done {
-  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+  background: linear-gradient(90deg, #c6db0a 0%, #cc0dbc 100%);
+  box-shadow: 0px 0px 19px rgba(61, 98, 221, 0.5);
 }
 
 .hide {
   display: none;
 }
 
-.hovered{
-  border-top: 2px solid red;
+.hovered {
+  position: relative;
+}
+
+.hovered::after {
+  font-family: "FontAwesome";
+  content: "\f062";
+  position: absolute;
+  /* text-align: center; */
+  margin: 0;
+  right: 50%;
+  bottom: -50px;
+  width: 1%;
+  height: 1%;
+  font-size: 50px;
 }

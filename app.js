@@ -1,11 +1,16 @@
 const placeholders = document.querySelectorAll('.placeholder');
 const item = document.querySelector('.item');
+const addTask = document.querySelector('.add-task');
+const inputNewTask = document.querySelector('.new-task')
+const startPosition = document.querySelector('.start-position')
 
 item.addEventListener('dragstart', dragStart);
 item.addEventListener('dragend', dragEnd);
 
+
+
 function dragStart(event) {
-	setTimeout(() => {
+		setTimeout(() => {
 		event.target.classList.add('hide');
 	})
 }
@@ -27,6 +32,7 @@ function dragOver(event) {
 }
 
 function dragEnter(event) {
+	console.log(event.target);
 	event.target.classList.add('hovered')
 }
 
